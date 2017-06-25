@@ -1,0 +1,339 @@
+html {
+  border:0px solid white;
+}
+@media (min-width: 500px) {
+   html {
+     border:10px solid white;
+   }
+}
+@media (min-width: 750px) {
+  html {
+    border:20px solid white;
+  }
+}
+
+.majorSection {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+#headerSection{
+  background: #330867;
+  background: -webkit-linear-gradient(#330867, #325f95); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#330867, #325f95); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#330867, #325f95); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#330867, #325f95); /* Standard syntax */
+  color: #fff;
+  position: relative;
+}
+
+.nav{
+  text-align: right;
+}
+.navItem{
+  display: inline;
+  margin-left: 24px;
+}
+.navItem>p, .navItem>p>i{
+  display: inline;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.navItem>i{
+  margin-right: 12px;
+  margin-left: -24px;
+}
+
+.navItem .navLink{
+  cursor: pointer;
+  display: inline;
+  color: #fff;
+  transition-duration: 0.1s;
+}
+.navItem .navLink:hover{
+  color: #30cfd0;
+  cursor: pointer;
+  text-decoration: none;
+}
+.navItem .navLinkIcon{
+  cursor: pointer;
+  display: inline;
+  color: #fff;
+  transition-duration: 0.1s;
+}
+.navItem .navLinkIcon:hover{
+  color: #30cfd0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#container0{
+  cursor: pointer;
+  position: relative;
+}
+#container1{
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+#headerSection h1{
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+#headerSection .brandstatement{
+  font-size: 2.4rem;
+  line-height: 1.61;
+  margin-bottom: 2.4rem;
+}
+#headerSection .button{
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #30cfd0;
+  border: 1.5px solid #30cfd0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+#headerSection .button:hover{
+  color: #fff;
+  background-color: #30cfd0;
+}
+
+
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.respImg{
+  min-height: 50px;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/* */
+#headercanvas{
+  position: absolute;
+  margin-top: -30px;
+  width: 100%;
+  height: 100%;
+}
+.stars {
+  fill: #fff;
+  stroke: none;
+}
+.constellationLabel{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+#constellationLabelText{
+  margin-bottom: 8px;
+  margin-right: 10px;
+  color: rgba(255,255,255, 0.75);
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+
+#contentSection{
+  font-size: 1.6rem;
+  line-height: 1.61;
+  color: #444;
+}
+
+#contentSection h1{
+  color: #30cfd0;
+  font-size: 4.0rem;
+  margin-top: 10rem;
+}
+#contentSection h2{
+  font-size: 2.4rem;
+  color: #30cfd0;
+  margin-top: 4rem;
+}
+#Quote h2{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #bdc3c7;
+  color: #333;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+#contentSection .portfolioItemHolder{
+  margin-bottom: 5.0rem;
+  margin-left: -20px;
+  border-left: 2px solid #30cfd0;
+}
+#contentSection .portfolioItem{
+  margin-left: 19px;
+}
+#contentSection .portfolioItemLinks{
+  margin-top: -0.4rem;
+}
+#contentSection .button{
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #330867;
+  border: 1.5px solid #330867;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+#contentSection .button:hover{
+  color: #fff;
+  background-color: #330867;
+  text-decoration: none;
+}
+#contentSection .button.soon{
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #999;
+  border: 1.5px solid #999;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  cursor: default;
+}
+#contentSection .button.soon:hover{
+  color: #999;
+  background-color: #fff;
+  text-decoration: none;
+}
+#contentSection .fa{
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #330867;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+#contentSection .fa:hover{
+  background-color: #fff;
+  color: #330867;
+  text-decoration: none;
+}
+#contentSection a{
+  color: #330867;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+#contentSection a:hover{
+  color: #fff;
+  background-color: #330867;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+#contentSection .linkToTop:hover{
+  color: #30cfd0;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+#footerSection{
+  background: #dcdbdd;
+  background: #bdc3c7;
+  color: #fff;
+}
+#footerSection .extLink{
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+#footerSection .extLink:hover{
+  background: #30cfd0;
+  cursor: pointer;
+}
+.socialbtns, .socialbtns ul, .socialbtns li{
+	margin: 0;
+	padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+.socialbtns .fa {
+	width: 30px;
+  height: 30px;
+	color: #dcdbdd;
+  color: #bdc3c7;
+	background-color: #fff;
+	padding-top: 9px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-o-border-radius: 15px;
+	transition: all ease 0.25s;
+	-moz-transition: all ease 0.25s;
+	-webkit-transition: all ease 0.25s;
+	-o-transition: all ease 0.25s;
+}
+.socialbtns .fa:hover {
+  color: #30cfd0;
+	transform: scale(1.5,1.5);
+	-moz-transform: scale(1.5,1.5);
+	-webkit-transform: scale(1.5,1.5);
+	-o-transform: scale(1.5,1.5);
+	transition: all ease 0.25s;
+	-moz-transition: all ease 0.25s;
+	-webkit-transition: all ease 0.25s;
+	-o-transition: all ease 0.25s;
+  text-decoration: none;
+}
+
+
+
+
+body p::-moz-selection{
+  background: #bdc3c7;
+}
+#headerSection h1::-moz-selection{
+  background: #bdc3c7;
+}
+
+#headerSection p a::-moz-selection{
+  background: #bdc3c7;
+}
+
+#headerSection p a i::-moz-selection{
+  background: #bdc3c7;
+}
