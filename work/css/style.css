@@ -1,0 +1,154 @@
+/*
+    Matt Dzugan
+*/
+
+.jumbotron.chapter {
+    color: #ffffff;
+    width:100%;
+    border-bottom: 8px solid rgba(33, 33, 33, 0.33);
+    margin-top:50px;
+}
+.jumbotron.chapter h1{
+    font-size:42px;
+}
+.tagline{
+  color: #999999;
+  font-size: 21px;
+}
+.wordcloudbreak{
+     margin-left:20px;
+     margin-right:20px;
+     color: #3b5998;
+}
+.wordcloudbreakfront{
+     margin-right:20px;
+     color: #3b5998;
+}
+.wordcloudbreakend{
+     margin-left:20px;
+     color: #3b5998;
+}
+.codeLanguage{
+    font-family:monospace;
+    color: #999999;
+}
+
+#InfoChapter .img-circle{
+     border: 3px solid #3b5998;
+     width: 100%;
+     max-width: 140px;
+     max-height: 140px;
+     margin-top: 21px;
+}
+.trait{
+     padding-bottom:20px;
+}
+.primarytext{
+     color: #3b5998;
+     font-weight: 700;
+}
+.primarytext2{
+     font-weight: 700;
+}
+
+#resume p{
+     margin-top: 0px;
+     margin-bottom: 0px;
+}
+
+#ResumeChapter{
+     background:#3b5998;
+}
+#AtmosphereChapter{
+     background:#FFCE54;
+     border-bottom-color: #F6BB42;
+}
+.atmospheretext{
+     color: #FFCE54;
+     font-weight: 700;
+}
+#VideoondemandChapter{
+     background:#AC92EC;
+     border-bottom-color: #967ADC;
+}
+.videoondemandtext{
+     color: #AC92EC;
+     font-weight: 700;
+}
+#SystemtradesChapter{
+     background:#FC6E51;
+     border-bottom-color: #E9573F;
+}
+.systemtradestext{
+     color: #FC6E51;
+     font-weight: 700;
+}
+#ReceiverdesignChapter{
+     background:#A0D468;
+     border-bottom-color: #8CC152;
+}
+.receiversdesigntext{
+     color: #A0D468;
+     font-weight: 700;
+}
+#ModelingandsimChapter{
+     background:#4FC1E9;
+     border-bottom-color: #3BAFDA;
+}
+.modelingandsimtext{
+     color: #4FC1E9;
+     font-weight: 700;
+}
+#DatapresentationChapter{
+     background:#3b5998;
+}
+.datapresentationtext{
+     color: #3b5998;
+     font-weight: 700;
+}
+#AcertaingrooveChapter{
+     background:#ED5565;
+     border-bottom-color: #DA4453;
+}
+.acg{
+     color:#ED5565;
+}
+.acg:hover{
+     color:#DA4453;
+}
+.acertaingroovetext{
+     color: #ED5565;
+     font-weight: 700;
+}
+
+footer{
+     background:#333333;
+     color: #fff;
+}
+.footer{
+     width: 100%;
+     background:#333;
+     color: #fff;
+}
+
+.imgPlaceHolder{
+     border: 2px solid #ddd;
+     text-align: center;
+     width: 100%;
+     height: 200px;
+     font-size: 50px;
+     color: #ddd;
+}
+.imgBody{
+     border: 2px solid #ddd;
+     width: 100%;
+     margin-top:30px;
+     margin-bottom:30px;
+}
+
+
+#Lmap1 {
+     width: 100%;
+     height: 300px;
+     background-color: #CCC;
+}

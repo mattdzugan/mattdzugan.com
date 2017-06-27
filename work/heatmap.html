@@ -1,0 +1,73 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+     <head>
+         <title></title>
+         <link rel="stylesheet" href="./css/bootstrap.css" media="screen">
+     </head>
+     <body>
+     <div id="heatmapouterviz" style="width:100%;">
+          <img class="img-responsive" src="images/sketchmap.PNG" style="position: absolute; z-index:10;"/>
+          <div id="heatmapinnerviz" style="width:1338px; height:713px; position: absolute; z-index:20;"></div>
+     </div>
+     <script src="./js/jq.js"></script>
+    <script src="./js/d3.v3.min.js"></script>     
+    <script src="./js/heatmap.min.js"></script>
+    <script type="text/javascript">
+         
+         // minimal heatmap instance configuration
+          var heatmapInstance = h337.create({
+            // only container is required, the rest will be defaults
+            container: document.querySelector('#heatmapinnerviz'),
+          // backgroundColor to cover transparent areas
+            backgroundColor: 'rgba(0,0,0,.0)',
+            // custom gradient colors
+            gradient: {
+              // enter n keys between 0 and 1 here
+              // for gradient color customization
+              '.0': '#111',
+              '.5': '#111',
+              '.8': '#3b5998',
+              '.9': '#3b5998',
+              '1.0': '#ffffff'
+            },
+            // the maximum opacity (the value with the highest intensity will have it)
+            maxOpacity: .6,
+            // minimum opacity. any value > 0 will produce 
+            // no transparent gradient transition
+            minOpacity: .6
+          });
+
+// now generate some random data
+var points = [];
+var max = 10;
+var width = 1338;
+var height = 713;
+var len = 700;
+
+while (len--) {
+  var val = Math.floor(Math.random()*100);
+  var radius = Math.floor(Math.random()*100);
+
+  max = Math.max(max, val);
+  var point = {
+    x: Math.floor(Math.random()*width),
+    y: Math.floor(Math.random()*height),
+    value: val,
+    radius: radius
+  };
+  points.push(point);
+}
+// heatmap data format
+var data = { 
+  max: max, 
+  data: points 
+};
+// if you have a set of datapoints always use setData instead of addData
+// for data initialization
+heatmapInstance.setData(data);
+    </script>
+</body>
+</html>

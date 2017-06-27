@@ -1,0 +1,236 @@
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<style>
+
+body {
+  background: radial-gradient(720px at 490px, #081f2b 0%, #061616 100%);
+  height: 960px;
+}
+
+path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.horizon {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.graticule {
+  stroke: #fff;
+  stroke-opacity: .02;
+}
+
+.ticks line {
+  stroke: #fff;
+}
+
+.ticks text {
+  fill: #fff;
+  text-anchor: middle;
+}
+
+.ticks--right-ascension text:nth-of-type(6n + 1) {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.stars {
+  fill: #fff;
+  stroke: none;
+}
+
+.star--active {
+  stroke: yellow;
+}
+
+.voronoi {
+  fill: none;
+  pointer-events: all;
+}
+
+.cross {
+  fill: none;
+  stroke: yellow;
+  stroke-width: 0.5px;
+}
+
+</style>
+<script>
+
+var width = 960,
+    height = 960,
+    scale = width * 0.45;
+
+var radius = d3.scale.linear()
+    .domain([-1, 6])
+    .range([3, 0.5]);
+
+
+var Lambda = d3.scale.linear()
+    .domain([0, width])
+    .range([-180, 180]);
+
+var Phi = d3.scale.linear()
+    .domain([0, height])
+    .range([90, -90]);
+
+var projection = d3.geo.gnomonic()
+    .scale(scale/2)
+    .clipAngle(80)
+    .rotate([0, -35])
+    .translate([width / 2, height / 2])
+    .precision(0.1);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(0.5,0.5)");
+
+svg.append("path")
+    .datum(d3.geo.circle().origin([0, 90]).angle(90))
+    .attr("class", "horizon")
+    .attr("d", path);
+
+svg.append("path")
+    .datum(d3.geo.graticule().minorStep([15, 10]))
+    .attr("class", "graticule")
+    .attr("d", path);
+
+/*
+var crossDeclination = svg.append("circle")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .attr("class", "cross cross--declination");
+
+var crossRightAscension = svg.append("line")
+    .attr("x1", width / 2)
+    .attr("y1", height / 2)
+    .attr("x2", width / 2)
+    .attr("y2", height / 2)
+    .attr("class", "cross cross--right-ascension");
+
+var ticksRightAscension = svg.append("g")
+    .attr("class", "ticks ticks--right-ascension");
+
+ticksRightAscension.selectAll("line")
+    .data(d3.range(0, 1440, 5)) // every 5 minutes
+  .enter().append("line")
+    .each(function(d) {
+      var p0 = projection([d / 4, 0]),
+          p1 = projection([d / 4, d % 60 ? -1 : -2]);
+
+      d3.select(this)
+          .attr("x1", p0[0])
+          .attr("y1", p0[1])
+          .attr("x2", p1[0])
+          .attr("y2", p1[1]);
+    });
+
+ticksRightAscension.selectAll("text")
+    .data(d3.range(24)) // every hour
+  .enter().append("text")
+    .each(function(d) {
+      var p = projection([d * 15, -4]);
+
+      d3.select(this)
+          .attr("x", p[0])
+          .attr("y", p[1]);
+    })
+    .attr("dy", ".35em")
+    .text(function(d) { return d + "h"; });
+
+svg.append("g")
+    .attr("class", "ticks ticks--declination")
+  .selectAll("text")
+    .data(d3.range(10, 91, 10))
+  .enter().append("text")
+    .each(function(d) {
+      var p = projection([0, d]);
+
+      d3.select(this)
+          .attr("x", p[0])
+          .attr("y", p[1]);
+    })
+    .attr("dy", ".35em")
+    .text(function(d) { return d + "°"; });
+*/
+d3.csv("https://gist.githubusercontent.com/mbostock/c7e85d2b47d11982db38/raw/941bfa0419ef6b246e05f2d8525f8020dae36c89/stars.csv", type, function(error, stars) {
+  if (error) throw error;
+
+  svg.insert("g", ".ticks")
+      .attr("class", "stars")
+    .selectAll("circle")
+      .data(stars)
+    .enter().append("circle")
+      .attr("class","nightStars")
+      .attr("id", function(d, i) { return "star-" + i; })
+      .attr("r", function(d) { return radius(d.magnitude); })
+      .attr("transform", function(d) { return "translate(" + d[0] + "," + d[1] + ")"; });
+
+
+
+
+
+
+
+});
+
+var AA = 0;
+
+
+
+/*
+d3.select("body").on("click", function() {
+  var p = d3.mouse(this);
+  projection.rotate([0, Phi(p[1]),Lambda(p[0])]);
+
+  updateViz();
+});
+*/
+
+var myTime = 0;
+window.setInterval(function(){
+  var myRot = projection.rotate();
+  projection.rotate( [myRot[0]+10, myRot[1], myRot[2]] );
+  /// call your function here
+  updateViz();
+}, 800);
+
+
+function updateViz(){
+  d3.selectAll("path")
+  //.transition().duration(200)
+  .attr("d", path);
+  //*
+  d3.selectAll(".nightStars")
+    .transition().ease('linear').duration(790)
+    .attr("transform", function(d) {
+          dd = type(d);
+          //console.log(d[0]);
+          //bb = projection()
+          return ("translate(" + dd[0] + "," + dd[1] + ")");
+    });
+}
+
+
+
+function type(d) {
+  var p = projection([(+d.RA_hour + d.RA_min / 60 + d.RA_sec / 3600) * 15, +d.dec_deg + d.dec_min / 60 + d.dec_sec / 3600]);
+  d[0] = p[0], d[1] = p[1];
+  d.magnitude = +d.magnitude;
+  return d;
+}
+
+
+</script>

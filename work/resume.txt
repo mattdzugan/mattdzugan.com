@@ -1,0 +1,67 @@
+# Matt Dzugan
+#### Los Angeles, CA (630) 479-3984
+
+
+
+
+## Objective
+I am looking to advance my career as a wireless communications systems engineer at an organization that embraces creativity, innovation, and collaborative engineering.
+
+
+
+
+## Skills
+Architecture Design, Analysis, Antenna, Atmospherics, Beamforming, Bit-Error Correction/Detection, Capacity, Concept of Operations (ConOps), Data Visualization, Digital Signal Processing, Digital Control Systems, End-to-End Performance, Frequency Reuse Optimization, GPS, Ground Terminal Performance, Hardware (Payload), Interference Calculation, Laser Comm, Link Performance, Network Routing, Modeling/Sim, Multiple-Input Multiple-Output Antenna, Radio Frequency Comm, Resource Allocation Optimization, Satellite Orbits, Satellite Payloads, Trade Studies, Verification/Test,
+
+`C,C++, Javascript, MATLAB, Python, Simulink, STK (& Cesium), VBA, VHDL/Verilog`
+
+
+
+
+## Work Experience
+### Boeing Satellite Development Center
+###### 2012-present - Communications Systems Engineer - El Segundo, CA
+Communications Architecture Analyst (Modeling/Sim) - Much of my experience is as part of an analysis team within Boeing Space and Intelligence Systems' internal research and development group. On this team I've worked to capture the performance of Boeing's newer "in-development" space-based communications technologies by creating and using custom simulation/modeling tools in C++/MATLAB/STK/Cesium to evaluate interference, capacity, and routing capability. Another role I have as a part of this team involves working with external stakeholders/customers.  Specifically - understanding which metrics are important to the customers and being able to feed back relevant information to the design to ensure that key engineering decisions are made appropriately.
+
+DSP Algorithms Design/Test - I worked as part of a three-person-team to conceptually develop the tracking and commanding receiver, and build the corresponding hardware circuits. The design process included sketching a block-diagram of a device that would meet requirements, developing up a bit-accurate mock-up in MATLAB & Simulink, designing block-level units in VHDL, designing functional tests, and supporting the unit-level test processes. I was also responsible for the Forward Error Correction code applied to the spacecraft commands and the demodulation of the tracking signal.
+
+Campaign Communication/End-to-End Lead - I lead the communications/payload portions of multiple RFP campaigns designing solutions for customers that have come to Boeing looking for new satellite assets. I used my creativity, analytics, and my ability to develop and coordinate tasks for the design team in order to make system-level trades regularly. Through this role I continuously engaged with customers, sharing our design progress and how our team's design decisions improve their key metrics of interest.
+
+### MITRE Corporation
+###### 2011 Summer - Communications Systems Engineer - San Diego, CA
+
+### Motorola
+###### 2010 Summer - Network Equipment Engineer - Schaumburg, IL
+
+
+
+
+## Project Portfolio (detailed descriptions attached below)
+Atmospheric Analysis - I developed an innovative analysis to reduce required payload power.
+
+Video Streaming Patent - I initiated and designed a space-based video-on-demand concept of operations and business model.
+
+Systems Trades - I have an excellent track record in planning scope of analysis to find the right results on the right timeline.
+
+Tracking Receiver Design - I've gotten my hands dirty in hardware and built a Forward Error Correction Hamming Code on a flight unit.
+
+Architecture Modeling + Sim - I helped build and manage the development of our current System Capacity Evaluation Tool from the ground up.
+
+Data Presentation - I support all my analyses and designs with effective communication and interpretation of data.
+
+
+
+
+## Education
+
+### Master of Science - 2012
+Northwestern University - Evanston, IL
+Electrical Engineering
+Wireless Communications Systems
+3.8 Grade Point Average
+
+### Bachelor of Science - 2012
+Northwestern University - Evanston, IL
+Electrical Engineering
+Magna Cum Laude
+3.8 Grade Point Average

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<!--
+.
+.
+.
+.     Hello Sir, Madame, Robot, or technologically-equipt-crabpeople:
+.
+.     I've hand written this from scratch, using a few open source libraries (bootstrap, D3)
+.     Writing html isn't that impressive, I know, but hey at least you know I can make a nice looking document when push comes to shove!
+.
+.     :-D
+.
+.
+.
+.
+.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Matt Dzugan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="./css/style.css" media="screen">
+    <link rel="stylesheet" href="./css/leaflet.css" media="screen">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-generic" href="./images/favicon.ico" />
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Matt Dzugan</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#">Info</a>
+            </li>
+            <li>
+              <a href="#ResumeChapter">Resum&#233</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Portfolio <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="#AtmosphereChapter">Atmospheric Analysis</a></li>
+                <li><a href="#VideoondemandChapter">Video Streaming Patent</a></li>
+                <li><a href="#SystemtradesChapter">System Trades</a></li>
+                <li><a href="#ReceiverdesignChapter">Tracking Receiver Design</a></li>
+                <li><a href="#ModelingandsimChapter">Architecture Modeling + Sim</a></li>
+                <li><a href="#DatapresentationChapter">Data Presentation</a></li>
+                <!--
+                <li class="divider"></li>
+                <li><a href="#AcertaingrooveChapter">A Certain Groove</a></li>
+                -->
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+                 <a href="mailto:mattdzugan@gmail.com?subject=mattdzugan.com"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="email me">
+                 <i class="fa fa-envelope"></i>
+                 </a>
+            </li>
+            <li>
+                 <a href="./MattDzugan.pdf"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="view .pdf">
+                 <i class="fa fa-file"></i>
+                 </a>
+            </li>
+            <li>
+                 <a href="./resume.txt"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="view .txt">
+                 <i class="fa fa-file-text"></i>
+                 </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <div class="page-header" id="banner">
+                   <div class="row">
+                        <div class="col-sm-6">
+                             <h1>Matt Dzugan</h1>
+                             <p>Los Angeles, CA &nbsp&nbsp&nbsp&nbsp&nbsp (630) 479-3984</p>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                             <h3 class="tagline">"Matt turns question into models, and turns their results into answers."</h3>
+                        </div>
+                   </div>
+              </div>
+         </div>
+     </div>
+
+
+
+
+      <!-- Info section
+      ================================================== -->
+      <div class="container" id="InfoChapter">
+           <div class="col-sm-8 col-sm-offset-2">
+       <div class="clearfix">
+           <div class="row text-center">
+             <div class="col-sm-4 col-xs-12 trait">
+               <div class="col-sm-12 col-xs-4">
+                    <img class="img-circle" src="./images/icon1sat.png" alt="Systems Engineer IMAGE">
+               </div>
+               <div class="col-sm-12 col-xs-8">
+                    <h2>Systems Engineer</h2>
+                    <p>As a communications lead for multiple new-satellite-business campaigns,
+                         I understand the impacts of every decision within each subsystem as we drive the bigger picture to an optimized design.</p>
+               </div>
+             </div><!--  -->
+             <div class="col-sm-4 col-xs-12 trait">
+               <div class="col-sm-12 col-xs-4">
+                    <img class="img-circle" src="./images/icon2.png" alt="Innovator IMAGE">
+               </div>
+               <div class="col-sm-12 col-xs-8">
+                    <h2>Innovator</h2>
+                    <p>I've made a name for myself in my current role by coming up with out-of-the-box solutions like
+                       deploying spacecraft with reduced payload power by taking advantage of localized weather patterns, and creating a space-based video-streaming business plan. </p>
+               </div>
+             </div><!--  -->
+             <div class="col-sm-4 col-xs-12 trait">
+               <div class="col-sm-12 col-xs-4">
+                    <img class="img-circle" src="./images/icon3.png" alt="Data Storyteller IMAGE">
+               </div>
+               <div class="col-sm-12 col-xs-8">
+                    <h2>Data Storyteller</h2>
+                    <p>I have experience and success in clearly conveying complex results to my customers, co-workers, and managers
+                         to assess the bottom line impact of a successful project.  I never share numbers I don't understand.</p>
+               </div>
+             </div><!--  -->
+           </div><!-- /.row -->
+           <div class="row text-center">
+                <h2>My Comm. Systems Engineer skills:</h2>
+                <p>
+                     <span class="wordcloudbreakfront">&middot</span>
+                     Architecture Design <span class="wordcloudbreak">&middot</span>
+                     Analysis <span class="wordcloudbreak">&middot</span>
+                     Antenna <span class="wordcloudbreak">&middot</span>
+                     Atmospherics <span class="wordcloudbreak">&middot</span>
+                     Beamforming <span class="wordcloudbreak">&middot</span>
+                     Bit-Error Correction/Detection <span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">C,C++</span> <span class="wordcloudbreak">&middot</span>
+                     Capacity <span class="wordcloudbreak">&middot</span>
+                     Concept of Operations (ConOps) <span class="wordcloudbreak">&middot</span>
+                     Data Visualization <span class="wordcloudbreak">&middot</span>
+                     Digital Signal Processing <span class="wordcloudbreak">&middot</span>
+                     Digital Control Systems <span class="wordcloudbreak">&middot</span>
+                     End-to-End Performance <span class="wordcloudbreak">&middot</span>
+                     Frequency Reuse Optimization <span class="wordcloudbreak">&middot</span>
+                     GPS <span class="wordcloudbreak">&middot</span>
+                     Ground Terminal Performance <span class="wordcloudbreak">&middot</span>
+                     Hardware (Payload) <span class="wordcloudbreak">&middot</span>
+                     Interference Calculation <span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">Javascript</span> <span class="wordcloudbreak">&middot</span>
+                     Laser Comm <span class="wordcloudbreak">&middot</span>
+                     Link Performance <span class="wordcloudbreak">&middot</span>
+                     Network Routing<span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">MATLAB</span> <span class="wordcloudbreak">&middot</span>
+                     Modeling/Sim <span class="wordcloudbreak">&middot</span>
+                     Multiple-Input Multiple-Output Antenna <span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">Python</span> <span class="wordcloudbreak">&middot</span>
+                     Radio Frequency Comm<span class="wordcloudbreak">&middot</span>
+                     Resource Allocation Optimization <span class="wordcloudbreak">&middot</span>
+                     Satellite Orbits <span class="wordcloudbreak">&middot</span>
+                     Satellite Payloads <span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">Simulink</span> <span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">STK (&amp Cesium)</span> <span class="wordcloudbreak">&middot</span>
+                     Trade Studies <span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">VBA, Visual Basic</span> <span class="wordcloudbreak">&middot</span>
+                     Verification/Test <span class="wordcloudbreak">&middot</span>
+                     <span class="codeLanguage">VHDL/Verilog</span>
+                     <span class="wordcloudbreakend">&middot</span>
+                </p>
+                <br>
+           </div>
+      </div>
+       </div>
+       </div>
+
+
+   <!-- Resume section
+      ================================================== -->
+    <div class="jumbotron chapter" id="ResumeChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Resum&#233</h1>
+                   <p> </p>
+              </div>
+         </div>
+    </div>
+    <div class="container" id="resume">
+         <div class="col-sm-8 col-sm-offset-2">
+              <h3 class="primarytext">Objective</h3>
+              <p>I am looking to advance my career as a wireless communications systems engineer at an organization
+                   that embraces creativity, innovation, and collaborative engineering.
+              </p>
+              <h3 class="primarytext">Skills</h3>
+              <p>
+                   Architecture Design,
+                   Analysis,
+                   Antenna,
+                   Atmospherics,
+                   Beamforming,
+                   Bit-Error Correction/Detection,
+                   Capacity,
+                   Concept of Operations (ConOps),
+                   Data Visualization,
+                   Digital Signal Processing,
+                   Digital Control Systems,
+                   End-to-End Performance,
+                   Frequency Reuse Optimization,
+                   GPS,
+                   Ground Terminal Performance,
+                   Hardware (Payload),
+                   Interference Calculation,
+                   Laser Comm,
+                   Link Performance,
+                   Network Routing,
+                   Modeling/Sim,
+                   Multiple-Input Multiple-Output Antenna,
+                   Radio Frequency Comm,
+                   Resource Allocation Optimization,
+                   Satellite Orbits,
+                   Satellite Payloads,
+                   Trade Studies,
+                   Verification/Test
+              </p>
+              <p style="margin-top:8px;">
+                   C,
+                   C++,
+                   Javascript,
+                   MATLAB,
+                   Python,
+                   Simulink,
+                   STK (&amp Cesium),
+                   VBA,
+                   VHDL/Verilog
+              </p>
+              <h3 class="primarytext">Work Experience</h3>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p class="primarytext2">Boeing Satellite Development Center</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>2012-present</p>
+                   </div>
+              </div>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p>Communications Systems Engineer</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>El Segundo, CA</p>
+                   </div>
+              </div>
+              <ul>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Communications Architecture Analyst (Modeling/Sim)- </span>
+                             Much of my experience is as part of an analysis team within Boeing Space and Intelligence Systems' internal research and development group.
+                             On this team I've worked to capture the performance of Boeing's newer "in-development" space-based communications technologies
+                             by creating and using custom simulation/modeling tools in C++/MATLAB/STK/<a href="https://cesiumjs.org/">Cesium</a> to evaluate interference, capacity, and routing capability.
+                             Another role I have as a part of this team involves working with external stakeholders/customers.
+                             Specifically - understanding which metrics are important to the customers and being able to feed back relevant information to the design to ensure that key engineering decisions are made appropriately.
+                        </p>
+                   </li>
+                   <li>
+                        <p>
+                             <span class="primarytext2">DSP Algorithms Design/Test - </span>
+                             I worked as part of a three-person-team to conceptually develop the tracking and commanding receiver, and build the corresponding hardware circuits.
+                             The design process included sketching a block-diagram of a device that would meet requirements, developing up a bit-accurate mock-up in MATLAB & Simulink, designing block-level units in VHDL, designing functional tests, and supporting the unit-level test processes.
+                             I was also responsible for the Forward Error Correction code applied to the spacecraft commands and the demodulation of the tracking signal.
+                        </p>
+                   </li>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Campaign Communication/End-to-End Lead - </span>
+                             I lead the communications/payload portions of multiple RFP campaigns designing solutions for customers that have come to Boeing looking for new satellite assets.
+                             I used my creativity, analytics, and my ability to develop and coordinate tasks for the design team in order to make system-level trades regularly.
+                             Through this role I continuously engaged with customers, sharing our design progress and how our team's design decisions improve their key metrics of interest.
+                        </p>
+                   </li>
+              </ul>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p class="primarytext2">MITRE Corporation</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>2011 Summer</p>
+                   </div>
+              </div>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p>Communications Systems Engineer</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>San Diego, CA</p>
+                   </div>
+              </div>
+              <br>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p class="primarytext2">Motorola</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>2010 Summer</p>
+                   </div>
+              </div>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p>Network Equipment Engineer</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>Schaumburg, IL</p>
+                   </div>
+              </div>
+              <h3 class="primarytext">Project Portfolio</h3>
+              <p>
+                   (detailed descriptions attached below)
+              </p>
+              <!-- -->
+              <ul>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Atmospheric Analysis - </span>
+                             I developed an innovative analysis to reduce required payload power.
+                        </p>
+                   </li>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Video Streaming Patent - </span>
+                             I initiated and designed a space-based video-on-demand concept of operations and business model.
+                        </p>
+                   </li>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Systems Trades - </span>
+                             I have an excellent track record in planning scope of analysis to find the right results on the right timeline.
+                        </p>
+                   </li>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Tracking Receiver Design - </span>
+                             I've gotten my hands dirty in hardware and built a Forward Error Correction Hamming Code on a flight unit.
+                        </p>
+                   </li>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Architecture Modeling + Sim - </span>
+                              I helped build and manage the development of our current System Capacity Evaluation Tool from the ground up.
+                        </p>
+                   </li>
+                   <li>
+                        <p>
+                             <span class="primarytext2">Data Presentation - </span>
+                              I support all my analyses and designs with effective communication and interpretation of data.
+                        </p>
+                   </li>
+              </ul>
+              <!-- -->
+              <h3 class="primarytext">Education</h3>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p class="primarytext2">Master of Science</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>2012</p>
+                   </div>
+              </div>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p>Northwestern University</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>Evanston, IL</p>
+                   </div>
+              </div>
+              <p class="primarytext2"></p>
+              <ul>
+                   <li>Electrical Engineering</li>
+                   <li>Wireless Communications Systems</li>
+                   <li>3.8 Grade Point Average</li>
+              </ul>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p class="primarytext2">Bachelor of Science</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>2012</p>
+                   </div>
+              </div>
+              <div class="row">
+                   <div class="col-xs-6">
+                        <p>Northwestern University</p>
+                   </div>
+                   <div class="col-xs-6">
+                        <p>Evanston, IL</p>
+                   </div>
+              </div>
+              <ul>
+                   <li>Electrical Engineering</li>
+                   <li>Magna Cum Laude</li>
+                   <li>3.8 Grade Point Average</li>
+              </ul>
+
+         </div>
+    </div>
+
+    <!-- Atmosphere section
+       ================================================== -->
+    <div class="jumbotron chapter" id="AtmosphereChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Portfolio: Atmospheric Analysis</h1>
+                   <p>I developed a clever analysis to <strong>reduce required payload power</strong>.</p>
+                   <p style="font-size:12px; margin-top:-16px;">some details modified/omitted to protect intellectual property</p>
+              </div>
+         </div>
+    </div>
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <h3 class="atmospheretext">
+                   Modeling atmospheric loss
+              </h3>
+              <p>
+                   Part of being able to correctly model the performance of a space-based communications system is accounting for the losses due to specific atmospheric conditions.
+                   Customers typically require certain performance characteristics to be achievable with at a set occurrence -frequency (e.g. 99.5% of the time).
+                   The atmospheric losses of this occurrence -frequency are typically calculated using the International Telecommunications Union's (ITU) recommendation documentation.
+              </p>
+              <h3 class="atmospheretext">
+                   A standard analysis
+              </h3>
+              <p>
+                   A typical way to ensure performance requirements are met is to use the ground equipment parameters and the ITU-recommended atmospheric loss values to derive an EIRP requirement (in dBW) for several points within the coverage region.
+                   If the spacecraft can provide EIRP at or above this required level at all points, then the system will perform as required at the specified occurrence -frequency.
+                   This approach allows payload elements (effective antenna diameter, amplifiers) to be sized in order to achieve the required performance.
+              </p>
+              <h3 class="atmospheretext">
+                   My improved analysis
+              </h3>
+              <p>
+
+                  However, the idea that these quantities are fixed is becoming less true with the rise in flexible payload technology.
+                  Such technology removes the fixed mapping from hardware element X to city Y.
+                  I developed an analysis that takes advantage of this potential for re-allocation, therefore enabling the ability to size hardware based on the overall occurrence -frequency rather than point-by-point.
+              </p>
+
+              <h5 class="atmospheretext">
+                   Treating separate variables separately
+              </h5>
+              <p>
+                  The ability to dynamically allocate EIRP means that, at any given instant, if a location's atmospheric conditions are benign, the spacecraft can allocate the power elsewhere.
+                  In fact, over a region the size of a large country or continent, atmospheric conditions at any one moment vary greatly.
+              </p>
+              <img class="img-responsive imgBody" src="images/weatherplots.png"/>
+              <p>
+                  Thus, for a flexible payload system, the total system power requirement at a certain occurrence  frequency is often much less than simply summing the computed individually required powers.
+                  Take for example the following notional spot beam system, who's power can be dynamically allocated to beams.
+              </p>
+              <img class="img-responsive imgBody" src="images/lossBeams.png"/>
+              <p>
+                   It becomes clear that the standard analysis unnecessarily  assumes that the payload needs to provide enough power to meet overcome the occurrence -frequency's corresponding atmospheric losses simultaneously while the flexible payload analysis takes advantage of the joint probability distribution.
+              </p>
+              <p>
+                   In short, a 99.5% availability at the system level, does not necessitate the corresponding 99.5% power at all cities at all times -
+                   and when evaluated properly, this corresponds to payload power savings!
+              </p>
+         </div>
+    </div>
+
+    <!-- Video On Demand section
+      ================================================== -->
+    <div class="jumbotron chapter" id="VideoondemandChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Portfolio: Video Streaming Patent</h1>
+                   <p>I initiated and designed a proof-of-concept <strong>Space-Based Video-On-Demand</strong> concept of operations and business model.</p>
+                   <p style="font-size:12px; margin-top:-16px;">some details modified/omitted to protect intellectual property</p>
+              </div>
+         </div>
+    </div>
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <h3  class="videoondemandtext">
+                   The conceptual architecture
+              </h3>
+              <p>
+                   We're always looking for new applications of satellite technology.
+                   Video on Demand is a hot growth area, so I put together an architecture that modifies some of our High Throughput Satellite designs for the Video on Demand use case, while still tacking advantage of satellite's inherent ease of broadcast.
+              </p>
+              <img class="img-responsive imgBody" src="images/vod.png"/>
+              <p>
+                   The networked system is quite typical to what one would find for a high throughput satellite.
+                   The specifics for Video on Demand can be highlighted by the following three key features:
+              </p>
+              <h5 class="videoondemandtext">
+                   In-home Box for Caching
+              </h5>
+              <p>
+                   Caching content by issuing a user-box with a large storage drive is one of the design decisions enabling the system to be capable of supporting millions of video on demand subscribers.
+                   Video content is not demanded with uniform probability, some content is more popular.
+                   Taking advantage of this fact, in combination with some user-specific data analytics can be used to cache content that users are likely to demand before they even request it, thus reducing the number of instant demand requests through the space segment.
+              </p>
+              <h5 class="videoondemandtext">
+                   Multi-Beam Hierarchy
+              </h5>
+              <p>
+                   The most universally desired content can be cyclically broadcast in a large area national beam during off-peak hours.
+                   During peak hours, the national broadcast beam can optionally be repurposed to transpond special live events.
+              </p>
+              <img class="img-responsive imgBody" src="images/diurnal.png"/>
+              <p>
+                   The rest of the Video-on-Demand requests that have not already been cached on a subscriber's local equipment will be served via highly localized spot beams, under a high-frequency-reuse scheme.
+              </p>
+              <h5 class="videoondemandtext">
+                   Buffering
+              </h5>
+              <p>
+                   In order to fully maximize the number of users supported by the system a simple buffering scheme can be employed.
+                   The buffering scheme aims to take advantage of the fact that often, same-cell-subscribers will request the same content at roughly the same time.
+                   Depending on the size of the network, and size of the content-library, requiring a demand-request to wait a short time (30 seconds) to see if any other requests come in for the same piece of content, thus aggregating to one request, can decrease total required demand to the space segment by a significant amount.
+                   Assuming parameters that would support a competitive video-on-demand system for United States subscribers, a 30 second buffer (to be masked by rolling a short advertisement) decreases demand in Gbps by 30%.
+              </p>
+         </div>
+    </div>
+
+    <!-- System Trade section
+      ================================================== -->
+    <div class="jumbotron chapter" id="SystemtradesChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Portfolio: Systems Trades</h1>
+                   <p>I have an excellent track record in planning scope of analysis to find <strong>the right results on the right timeline</strong>.</p>
+                   <p style="font-size:12px; margin-top:-16px;">some details modified/omitted to protect intellectual property</p>
+              </div>
+         </div>
+    </div>
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <p>
+                   Recently I was working on a highly-time sensitive project.
+                   My team was tasked to come up with an ideal architecture for a specified communications mission.
+                   We had spent a few days generating concepts and ideas, but at a 9:00AM tag-up, I was told that we needed an initial design for a 4:00PM internal design review.
+                   As the communications lead for the campaign, here's how I spent my time:
+              </p>
+              <h3 class="systemtradestext">
+                   9:30 AM: Planning
+              </h3>
+              <p>
+                   First, I outlined a simple to do list.
+                   For this specific design objective, I needed to determine the best way to serve useful capacity to an area of non-uniform demand.
+                   Due to size, weight, and power objectives from other team members, the scope of my system level design was limited to up to two beam sizes.
+                   If I could determine a successful beam-laydown by the end of the day, the team would be able to move forward.
+              </p>
+              <p>
+                   With a wide open field of possible beam laydowns and frequency plans, I decided to start by simply allocating bandwidth to beams and geographic areas.
+                   Smaller beams generally have higher directivity and can offer a higher capacity density to their regions.
+                   Larger beams are generally better suited to providing ubiquitous coverage to a large region.
+              </p>
+              <h3 class="systemtradestext">
+                   10:00 AM: Creating a spectrum of beam options
+              </h3>
+              <p>
+                   In order to enable trade studies throughout the day, I first created notional beam lattices using standard hexagonal tessellations.
+                   I created 10 files, each detailing a simple beam-lattice as applied to the coverage region of interest.
+              </p>
+              <img class="img-responsive imgBody" src="images/Lattice.PNG"/>
+              <h3 class="systemtradestext">
+                   11:00 AM: Writing some analysis tools
+              </h3>
+              <p>
+                   To be able to compare designs against one another, I needed to develop some metric to measure effectiveness of each beam lay-down.
+                   Ultimately, sellable system capacity would be the most telling metric, since it closely relates to the customer's business objectives.
+                   Sellable capacity, in this case, referred to the intersection of capacity provided from the spacecraft and population per beam.
+                   Since the final capacity provided calculation is dependent on the amount of spacecraft power allocated per beam, and can thus only be really only be evaluated once several other parameters have been determined, I chose to begin by assigning bandwidth to population.
+                   I grabbed the latest NASA world-population estimates to facilitate my analysis.
+              </p>
+              <h3 class="systemtradestext">
+                   12:00 PM: Evaluate population per Beam
+              </h3>
+              <p>
+                   Within each possible beam-lattice configuration, I used my custom analysis tool to tally up the population in each beam.
+                   This information would become useful once I started building a real usable beam laydown out of my notional trade space results.
+                   The population per beam information would be useful in indicating which regions are better served by which beam size.
+              </p>
+              <h3 class="systemtradestext">
+                   1:00 PM:  Decide and test trade space
+              </h3>
+              <p>
+                   Thinking back to my imposed constraint of two beam-sizes, I decided that the trade space could be encapsulated by two independent variables: Beam Size 1, and Beam Size 2.
+                   I decided to run some estimates for all combinations of beam-size pairs, to determine (for each pair) how many beams of each size are required for a fixed beam count (hardware constraint).
+                   For example, if my design was to be fixed at N beams, a closed-form system of equations can be solved to determine number of each type of beams (A,B).
+              </p>
+              <p  style="color:#555;">
+                   A + B = N <br>
+                   A&middot;AreaOfBeamTypeA + B&middot;AreaOfBeamTypeB = CoverageArea
+              </p>
+              <p>
+                   I then used my analysis tool to iterate through each beam-size pair, and allocated spectrum to beams, according to the previously computed population statistics.
+                   At this point, each beam was assigned a bandwidth, and corresponding C/I estimate, so I next allocated the fixed power according to C/I such that no beam was heavily C/I nor C/N limited.
+                   Finally, each beam had enough information to provide a capacity estimate.
+              </p>
+              <h3 class="systemtradestext">
+                   2:00 PM: Review and Revise
+              </h3>
+              <p>
+                   Upon reading through my results, I quickly became unsatisfied with an outcome: the best performing combination was when the beam sizes matched for the smallest possible beam.
+                   This didn't seem right, and I quickly understood that my analysis was using a misleading metric;  I was failing to account for the fact that capacity distributed to areas of relatively low population was counted as just as valuable as in high population areas.
+                   Based on this observation, I modified my simulation tool to evaluate and optimize for a number I called "sellable capacity", the intersection of capacity served and demand (which I modeled using population).
+              </p>
+              <h3 class="systemtradestext">
+                   3:00 PM: Synthesize and Interpret Data
+              </h3>
+              <p>
+                   With these results I was able to determine the beam-size pair that achieves the most sellable capacity for my assumptions.
+                   Having only an hour remaining before sharing my results with the team, I started putting a presentation together.
+                   The obvious content was a picture of the optimized beam laydown generated by my custom analysis, along with some metrics such as total capacity, sellable capacity, antenna sizes, etc.
+                   However, presenting a single static answer as a point in space is not good practice.
+                   I wanted to be able to put some context behind the analysis, so I re-executed my code using different values for the any parameters that were imposed hardware constraints.
+                   It's always useful to know how much a design would be impacted by a restriction, or relaxing in a set of constraints.
+                   I also presented some images of the beam-size pairs near, but not exactly, the optimal solution.
+                   This sensitivity analysis is helpful in illustrating why the "ideal solution" is in fact the "ideal solution", as trends in interference per beam, and stranded capacity can be quickly visualized.
+              </p>
+              <p>
+                   This value in this information is not only the understanding of what performance a system like this can provide, but also speaks to what sorts of antenna equipment or payload units is necessary to achieve it.
+              </p>
+         </div>
+    </div>
+
+    <!-- Receiver section
+      ================================================== -->
+    <div class="jumbotron chapter" id="ReceiverdesignChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Portfolio: Tracking Receiver Design</h1>
+                   <p>I've gotten my hands dirty in hardware and built a <strong>Forward Error Correction Hamming Code</strong> on a flight unit.</p>
+                   <p style="font-size:12px; margin-top:-16px;">some details modified/omitted to protect intellectual property</p>
+              </div>
+         </div>
+    </div>
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <p>
+                   Forward Error Correction refers to the technique used for controlling data errors over noisy channels.
+                   In short, messages can be encoded in such a way that a receiver with knowledge of the coding scheme can take advantage of certain redundancies in the transmitted message to detect or possibly correct bit errors as they occur in transmission.
+                   As part of the Digital Signal Processing (DSP) team, my task was to design the encoding/decoding scheme as well as the on-board hardware capable of decoding the spacecraft command message sent to the satellite.
+                   My task in designing the Forward Error Correction logic into the Command Receiver was to build a working circuit with as few hardware-gates as possible.
+                   It goes without saying that implementing a receiver without Forward Error Correction would certainly reduce the hardware count, but with a unit level requirement for "Command Error Rate", it seemed certain that some level of Forward Error Correction would be necessary.
+              </p>
+              <h3  class="receiversdesigntext">
+                   Deriving a Required Design
+              </h3>
+              <p>
+                   For this particular application, there was no requirement on information rate, or speed of message transmission that would require an extremely low overhead encoding scheme.
+                   With no penalty to a less efficient coding scheme, and a push for minimal hardware impact, a Hamming Code was the right fit for the application.
+                   Mocking up the spec behavior of the unit with a MATLAB simulation allowed us to generate a BER (bit error rate) vs Signal Power curve.
+                   From this curve I used the bit-per-frame and frame-per-command definitions to derive a CER (command error rate) vs Signal Power curve.
+                   Theoretical calculations of {7,4}, {15,11}, {31,26}, {63, 57} and {127, 120} hamming code behavior showed that a {31,26} Hamming Code would shift the CER vs Signal Power curve enough to meet the "Command Error Rate" requirement.
+              </p>
+              <h3  class="receiversdesigntext">
+                   Building and Testing the Hamming Decoder
+              </h3>
+              <p>
+                   After building a {31,26} Hamming Code Decoder into the existing MATLAB simulation to confirm the desired performance metrics, I defined a series of test criteria that I would use to eventually confirm that the true hardware receiver was properly functional.
+                   I wrote a series of tests to test the Hamming Decoder Block by itself.
+                   These tests ensured that individual sets of 31-bit words were properly decoded into their correct 26-bit messages.
+                   I wrote a script to complete an exhaustive test of all 2^26 unique cases, knowing that an overnight simulation should be long enough to run the circuit real-time 2^26 times.
+                   With these test-descriptions out of the way, the remaining tests put the Hamming Decoder Block in various flight use cases, testing the "seams" and "switches" and "firsts" and "lasts" of operation to make sure that all edge cases operated successfully.
+                   Finally, I built the circuit using Verilog and ran my tests in System Verilog.
+              </p>
+              <!--
+              <h3  class="receiversdesigntext">
+                   Defining the Coding Scheme
+              </h3>
+              <p>
+                   With a working hamming decoder, the only remaining piece of the puzzle was to give the dec
+                   Designed words to minimize p(fail)
+                   Markov
+              </p>
+              -->
+         </div>
+    </div>
+
+    <!-- Modeling and Sim section
+      ================================================== -->
+    <div class="jumbotron chapter" id="ModelingandsimChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Portfolio: Architecture Modeling + Sim</h1>
+                   <p>I helped build and manage the development of our current <strong>System Capacity Evaluation Tool</strong> from the ground up.</p>
+                   <p style="font-size:12px; margin-top:-16px;">some details modified/omitted to protect intellectual property</p>
+              </div>
+         </div>
+    </div>
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <h3  class="modelingandsimtext">
+                   A fully abstracted object model
+              </h3>
+              <p>
+                   Working in the internal research and development group, we thought that rather than developing yet another excel-based link budget calculator, we'd develop a tool capable of taking systems as we see them and evaluating various performance measures of effectiveness.
+                   This meant that we were looking to create an object model of moving nodes, made up of antenna, amplifiers, converters and processors.
+                   In the end the goal was to have the ability to model communication requests from a begin-node to an end-node, and evaluate their ability to traverse the network.
+                   I'll focus on some of the snippets that I helped with in particular.
+              </p>
+              <h3  class="modelingandsimtext">
+                   Beamforming
+              </h3>
+              <p>
+                   Architecting  high throughput systems capable of 100s of Gbps through a single spacecraft depends on a high degree of frequency reuse.
+                   In order to make use of a given slice of bandwidth multiple times, it must be reused in geographic regions distinct enough that an antenna pointed at one can successfully "ignore" the others - this is the basic charter of beamforming.
+                   Therefore, our simulation tool needed the ability to optimally create gain patterns peaked in certain areas, and nulled in others in the far field.
+                   Our tool uses a closed form matrix solution determining individual feed excitations as a first solution and then optionally optimizes further based on user input.
+              </p>
+              <img class="img-responsive imgBody" src="images/bfHex.png"/>
+              <p>
+                   Above is an example pattern where the region of interest is Los Angeles, and areas in Northern California and Eastern Utah are re-using the same frequency with minimal interference.
+              </p>
+              <h3  class="modelingandsimtext">
+                   Pathfinder
+              </h3>
+              <p>
+                   As communication networks become larger and more complex, modeling their performance at the individual link level is no longer sufficient, as a given message may pass through multiple intermediate nodes before arriving at its final destination.
+                   All of this routing makes for multiple possible routes from "A-to-B", and therefore multiple possible link budgets with multiple possible link quality metrics.
+                   To capture this in our modeling tool, I helped develop a modified "Djikstra's Algorithm" to allow a communication request to find the best path from point A to B.
+              </p>
+              <img class="img-responsive imgBody" src="images/djikstra.png"/>
+              <p>
+                   In this case the "cost" of any edge in the graph of nodes refers to the received signal-to-noise-plus-interference ratio of the message.
+                   Thus, the calculated routes are determined not-only to maximize signal strength, but also to minimize potential interference.
+                   This allows as many requests as possible to be accommodated by the network, maximizing total network capacity.
+              </p>
+
+              <h3  class="modelingandsimtext">
+                   Interference Calculation
+              </h3>
+              <p>
+                  As alluded to in the previous section, interference calculation is key to the proper modeling of system performance.
+                  Not only did I help develop the model capable of computing co-channel interference (due to frequency reuse, and mitigated by beamforming) - but the fully abstracted interference from any node to any other node.
+
+              </p>
+         </div>
+    </div>
+
+    <!-- Data Presentation section
+      ================================================== -->
+    <div class="jumbotron chapter" id="DatapresentationChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Portfolio: Data Presentation</h1>
+                   <p>I support all my analyses and designs with <strong>effective communication</strong> and <strong>interpretation of data</strong>.</p>
+                   <p style="font-size:12px; margin-top:-16px;">some details modified/omitted to protect intellectual property</p>
+              </div>
+         </div>
+    </div>
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <p>
+                   A picture is worth a thousand words, and often it's easier to draw that picture than write those words.  Here are a few examples of illustrations I've built for various audiences and messages.
+              </p>
+              <h3  class="datapresentationtext">
+                   To a technical audience
+              </h3>
+              <h5  class="datapresentationtext">
+                   Noise or Interference limited?
+              </h5>
+              <p>
+                   In a high throughput, multi-beam system, designs often are quite complex and it becomes difficult to identify which "knobs" can be turned to improve performance and which will have little-to-no effect.
+                   At a top level, downlink capacity is driven by Signal-to-Interference-plus-Noise ratio.
+                   Determining whether that ratio is being driven by the "interference" or "noise" term is the first step in enabling certain architecture optimizations.
+                   This graphic serves as a simple visual indicator to give an idea as to which areas within the coverage region are limited by C/N (noise), and which are limited by C/I (interference).
+              </p>
+              <div id="Lmap1">
+                   <img src="images/key.png" style="position: absolute; width: 120px; right:20px; bottom:20px; z-index:100;"/>
+              </div>
+              <p>
+                   For example, if the system is under-performing in San Francisco, it is immediately clear that pure Signal-to-Noise ratio is driving this performance.
+                   That is - simply increasing power to the beams responsible for Northern California would successfully improve performance metrics in San Francisco, whereas improving performance in Dallas would require a different approach.
+                   Dallas is receiving plenty of power but performance is limited by interference.
+                   In this notional example, adjusting a frequency reuse scheme or implementing a better power control algorithm may be required if Dallas needs more capacity.
+              </p>
+              <h3  class="datapresentationtext">
+                   To a less technical audience
+              </h3>
+              <h5  class="datapresentationtext">
+                   Put things in perspective
+              </h5>
+              <p>
+                   Sometimes space-based communications can be hard to visualize and conceptualize,
+                   I've found that a simple simulation of the field if view of an antenna system can often be helpful in meetings to remind everyone of the scope of the mission.
+              </p>
+              <div id="globeviz"></div>
+              <h5  class="datapresentationtext">
+                   Simple illustration of complex trades
+              </h5>
+              <p>
+                   Recently my team was tasked by some business executives to identify which out of a handful of existing on-orbit spacecraft would be best suited to carry out a specific mission objective they had in mind.
+                   They were expecting that a detailed analysis taking several days would be necessary in order to find an answer to their query.
+                   However, once I gathered all the operating details on each spacecraft, I realized that for this application, no analysis was needed.
+                   The Shannon-Hartley Theorem
+              </p>
+              <p  style="color:#555;">
+                   Capacity = &eta;&middot;Bandwidth<br>
+                   Capacity = Bandwidth&middot;log(1 + Signal-to-noise-plus-interference-ratio)
+              </p>
+              <p>
+                   is a truth ingrained within any electrical engineer, but not necessarily all business executives.
+                   I created an image similar to the following to illustrate that since all messages were at a pre-determined bit efficiency (bit/baud), I could tell by bandwidth alone, which system would perform best.
+              </p>
+              <table class="table table-bordered text-center">
+                   <tr>
+                        <td>BW = 50 MHz</td>
+                        <td>BW = 100 MHz</td>
+                        <td>BW = 50 MHz</td>
+                        <td>BW = 100 MHz</td>
+                   </tr>
+                   <tr>
+                        <td>&eta; = 1.5 bit/baud</td>
+                        <td>&eta; = 1.5 bit/baud</td>
+                        <td>&eta; = 3.0 bit/baud</td>
+                        <td>&eta; = 3.0 bit/baud</td>
+                   </tr>
+                   <tr>
+                        <td colspan=4>
+                             <img class="img-responsive" src="images/sand.gif" style="width:100%"/>
+                        </td>
+                   </tr>
+                   <tr>
+                        <td>C = 75 Mbps</td>
+                        <td>C = 150 Mbps</td>
+                        <td>C = 150 Mbps</td>
+                        <td>C = 300 Mbps</td>
+                   </tr>
+              </table>
+         </div>
+    </div>
+
+
+    <!--
+    <div class="jumbotron chapter" id="AcertaingrooveChapter">
+         <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                   <h1>Personal Persuits: A Certain Groove</h1>
+                   <p>Comm. Systems Engineer by day, <strong>Funky Trombone</strong>-rockstar by night.</p>
+              </div>
+         </div>
+    </div>
+    <div class="container">
+         <div class="col-sm-8 col-sm-offset-2">
+              <h3  class="acertaingroovetext">
+                   Los Angeles Cover Band
+              </h3>
+              <p>
+                   I'm in a band called A Certain Groove.  We aim to take crowd favorite classics from every era and turn them into danceable funky jams!
+              </p>
+              <p>
+                   Here's a video of us performing Billboard Hot 100 hit from 2002, "No One Knows" by Queens of the Stone Age.
+              </p>
+              <div class="embed-responsive embed-responsive-16by9">
+                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gMUvThr1TDU" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <h3  class="acertaingroovetext">
+                   Shameless Plug
+              </h3>
+              <p>
+                   If you like what you hear, by all means
+                   <a href="http://www.acertaingroove.com" target="_blank" class="acg">check out our website</a>,
+                   and of course,
+                   <a href="http://www.facebook.com/acertaingroove" target="_blank" class="acg">like us on facebook</a>!
+              </p>
+              <br><br><br><br>
+         </div>
+    </div>
+  -->
+
+    <div class="footer">
+    <div class="container">
+     <footer>
+          <div class="col-xs-3">
+               <br><br>
+               <p>Los Angeles, CA</p>
+          </div>
+          <div class="col-xs-6 text-center">
+               <img class="img-responsive" src="images/MattDzugan.gif" />
+          </div>
+          <div class="col-xs-3 text-right">
+               <br><br>
+               <p>(630) 479-3984</p>
+          </div>
+     </footer>
+    </div>
+    </div>
+
+
+
+
+    <script src="./js/jq.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/d3.v3.min.js"></script>
+    <script src="./js/topojson.v1.min.js"></script>
+    <script src="./js/heatmap.min.js"></script>
+    <script src="./js/geo.projection.v0.min.js"></script>
+    <script src="./js/earth.js"></script>
+    <script src="./js/leaflet.js"></script>
+    <script src="./js/leaflet-heatmap.js"></script>
+    <script src="./js/Lmap1.js"></script>
+    <script src="./js/Lmap2.js"></script>
+    <script type="text/javascript">
+         $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+         });
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<style>
+
+body {
+  background: radial-gradient(720px at 490px, #081f2b 0%, #061616 100%);
+  height: 960px;
+}
+
+path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.horizon {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.graticule {
+  stroke: #fff;
+  stroke-opacity: .02;
+}
+
+.ticks line {
+  stroke: #fff;
+}
+
+.ticks text {
+  fill: #fff;
+  text-anchor: middle;
+}
+
+.ticks--right-ascension text:nth-of-type(6n + 1) {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.stars {
+  fill: #fff;
+  stroke: none;
+}
+
+.star--active {
+  stroke: yellow;
+}
+
+.voronoi {
+  fill: none;
+  pointer-events: all;
+}
+
+.cross {
+  fill: none;
+  stroke: yellow;
+  stroke-width: 0.5px;
+}
+
+</style>
+<script>
+
+var width = 960,
+    height = 960,
+    velocity = .002,
+    scale = width * 0.45,
+    time = Date.now();
+
+var position = d3.scale.ordinal()
+    .domain([0, 1])
+    .rangePoints([0, width * .87], .8);
+
+var radius = d3.scale.linear()
+    .domain([-1, 6])
+    .range([1.5, 0.5]);
+var color = d3.scale.linear()
+    .domain([-1,6])
+    .range(["rgba(255,255,255,0.9)", "rgba(255,255,255,0.6)"])
+
+
+var Lambda = d3.scale.linear()
+    .domain([0, width])
+    .range([-180, 180]);
+
+var Phi = d3.scale.linear()
+    .domain([0, height])
+    .range([90, -90]);
+
+var projection = d3.geo.gnomonic()
+    .scale(scale/2)
+    .clipAngle(80)
+    .rotate([0, -35])
+    .translate([width / 2, height / 2])
+    .precision(0.3);
+
+var sphere = {type: "Sphere"};
+var graticule = d3.geo.graticule()();
+
+var canvas = d3.select("body").append("canvas")
+    .attr("width", width)
+    .attr("height", height);
+
+var context = canvas.node().getContext("2d");
+
+context.strokeStyle = "#aaa";
+
+var path = d3.geo.path()
+    .context(context);
+
+var starsLocs = d3.select('canvas');
+
+
+
+
+
+d3.csv("https://gist.githubusercontent.com/mbostock/c7e85d2b47d11982db38/raw/941bfa0419ef6b246e05f2d8525f8020dae36c89/stars.csv", type, function(error, stars) {
+  if (error) throw error;
+
+  var dataBinding = starsLocs.selectAll("points.arc")
+    .data(stars)
+  		.enter()
+      .append("points")
+      .classed("arc", true)
+      .attr("x", function(d) {return projection([d.lon,d.lat])[0]})
+      .attr("y", function(d) {return projection([d.lon,d.lat])[1]})
+      .attr("radius", function(d) {return radius(d.magnitude);})
+      .attr("fillStyle", function(d) {return color(d.magnitude);});
+      //.attr("fillStyle", "#ddd");
+
+  d3.timer(function() {
+    var dt = Date.now() - time;
+    projection.rotate([velocity * dt, -45, 0]);
+    starsLocs.selectAll("points.arc")
+    .attr("x", function(d) {return projection([d.lon,d.lat])[0]})
+    .attr("y", function(d) {return projection([d.lon,d.lat])[1]});
+    render();
+  });
+
+
+
+  function render() {
+    var ImageData_Old = context.getImageData(0,0,width,height);
+    context.clearRect(0, 0, width, height);
+    /*
+    for(var i=0;i<height;i++)
+      for(var j=0;j<width;j++)
+         ImageData.data[((i*(width*4)) + (j*4) + 3)] = 3;//opacity = 0.5 [0-255]
+    */
+
+
+
+
+    //context.putImageData(ImageData,0,0);//put image data back
+
+
+
+    //context.beginPath();
+    //context.rect(0, 150, 10, 10);
+    //context.fillStyle="red";
+    //context.fill();
+    //context.closePath();
+
+    var translate = projection.translate();
+    //context.save();
+    //context.translate(translate[0], translate[1]);
+    //context.rotate(Math.PI / 2);
+    //context.translate(-translate[0], -translate[1]);
+
+    path.projection(projection);
+
+    context.beginPath();
+    path(sphere);
+    context.stroke();
+
+    //*
+    context.beginPath();
+    path(graticule);
+    context.strokeStyle = "#061616";
+    context.lineWidth = 0.5;
+    context.stroke();
+    //*/
+
+
+
+    var elements = starsLocs.selectAll("points.arc");
+  	elements.each(function(d) {
+      var node = d3.select(this);
+      context.beginPath();
+  		context.arc(node.attr("x"), node.attr("y"), node.attr("radius"), 0, 2 * Math.PI);
+  		context.fillStyle = node.attr("fillStyle");
+      context.fill();
+      //context.closePath();
+  	});
+
+
+    /*
+    var ImageData_New = context.getImageData(0,0,width,height);
+    var ImageData_Both = ImageData_New;
+    var pp = 0.95;
+    var qq = 1-pp;
+    for(var i=0;i<height;i++){
+      for(var j=0;j<width;j++){
+        ImageData_Both.data[((i*(width*4)) + (j*4) + 0)] = Math.round((pp*ImageData_Old.data[((i*(width*4)) + (j*4) + 0)])+(qq*ImageData_New.data[((i*(width*4)) + (j*4) + 0)]));
+        ImageData_Both.data[((i*(width*4)) + (j*4) + 1)] = Math.round((pp*ImageData_Old.data[((i*(width*4)) + (j*4) + 1)])+(qq*ImageData_New.data[((i*(width*4)) + (j*4) + 1)]));
+        ImageData_Both.data[((i*(width*4)) + (j*4) + 2)] = Math.round((pp*ImageData_Old.data[((i*(width*4)) + (j*4) + 2)])+(qq*ImageData_New.data[((i*(width*4)) + (j*4) + 2)]));
+        ImageData_Both.data[((i*(width*4)) + (j*4) + 3)] = Math.round((pp*ImageData_Old.data[((i*(width*4)) + (j*4) + 3)])+(qq*ImageData_New.data[((i*(width*4)) + (j*4) + 3)]));
+      }
+    }
+
+   context.clearRect(0, 0, width, height);
+   context.putImageData(ImageData_Both,0,0);//put image data back
+
+
+   var elements = starsLocs.selectAll("points.arc");
+   elements.each(function(d) {
+     var node = d3.select(this);
+     context.beginPath();
+     context.arc(node.attr("x"), node.attr("y"), node.attr("radius"), 0, 2 * Math.PI);
+     context.fillStyle = node.attr("fillStyle");
+     context.fill();
+     context.closePath();
+   });
+   */
+
+
+
+   context.restore();
+
+  }
+
+
+
+
+
+
+
+
+});
+d3.select(self.frameElement).style("height", height + "px");
+
+
+function type(d) {
+  d.lon = (+d.RA_hour + d.RA_min / 60 + d.RA_sec / 3600) * 15;
+  d.lat = (+d.dec_deg + d.dec_min / 60 + d.dec_sec / 3600);
+  d.magnitude = +d.magnitude;
+  return d;
+}
+
+
+</script>
